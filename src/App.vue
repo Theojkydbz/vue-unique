@@ -7,6 +7,7 @@ generator "/>
       <Btn />
       <Btn2 />
     </div>
+    <MyCanvas />
     <p class="signature">Made with <img class="logo" src="./assets/logo.png" width="20px" height="20px" /> by Théo Geiller</p>
   </div>
 </template>
@@ -16,6 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Btn from '@/components/Btn'
 import Btn2 from '@/components/Btn2'
 import Phone from '@/components/Phone'
+import MyCanvas from '@/components/Phone/MyCanvas'
 
 export default {
   name: 'app',
@@ -23,7 +25,8 @@ export default {
     HelloWorld,
     Btn,
     Btn2,
-    Phone
+    Phone,
+    MyCanvas
   }
 }
 </script>
