@@ -1,6 +1,6 @@
 <template>
     <div class="btn">
-        <button>
+        <button @click="generate">
             <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="iPhone-SE" transform="translate(-229.000000, -210.000000)" fill="#2F3542" fill-rule="nonzero">
@@ -16,7 +16,13 @@
 </template>
 
 <script>
+
 export default {
+    methods : {
+        generate () {
+            this.$emit('generateUrl')
+        }
+    }
 
 }
 </script>

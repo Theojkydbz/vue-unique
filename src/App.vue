@@ -2,10 +2,10 @@
   <div id="app">
     <HelloWorld msg="Unique wallpaper
 generator "/>
-    <Phone class="align right" />
+    <Phone :url="url" class="align right" />
     <div class="align left">
-      <Btn />
-      <Btn2 />
+      <Btn @generateUrl="generate" />
+      <Btn2 @saveUrl="save" />
     </div>
     <MyCanvas />
     <p class="signature">Made with <img class="logo" src="./assets/logo.png" width="20px" height="20px" /> by Théo Geiller</p>
@@ -13,6 +13,8 @@ generator "/>
 </template>
 
 <script>
+import store from '@/store'
+
 import HelloWorld from './components/HelloWorld.vue'
 import Btn from '@/components/Btn'
 import Btn2 from '@/components/Btn2'
@@ -27,6 +29,19 @@ export default {
     Btn2,
     Phone,
     MyCanvas
+  },
+  data() {
+    return {
+      url: 'https://raw.githubusercontent.com/Theojkydbz/Pattern_gen/master/example/Home.png'
+    }
+  },
+  methods:{
+    generate() {
+      this.url = store.genere()
+    },
+    save() {
+      store.saver(this.url)
+    }
   }
 }
 </script>

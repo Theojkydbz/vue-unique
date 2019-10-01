@@ -22,7 +22,7 @@ h1{
   font-size: 50px;
   color: #2F3542;
   letter-spacing: -0.04px;
-  margin-bottom: 200px;
+  margin-bottom: 5rem;
   margin-left: 60px
 }
 @media screen and (min-width: 200px) and (max-width: 640px) {
